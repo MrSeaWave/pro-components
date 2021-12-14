@@ -7,6 +7,10 @@ const github = new GitHub({
   debug: process.env.NODE_ENV === 'development',
 });
 
+console.log('process.env',process.env);
+
+console.log('process.env.GITHUB_TOKEN',process.env.GITHUB_TOKEN);
+
 github.authenticate({
   type: 'token',
   token: process.env.GITHUB_TOKEN || process.env.GITHUB_AUTH,
