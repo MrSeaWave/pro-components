@@ -1,4 +1,9 @@
-﻿const GitHub = require('github');
+
+console.log('process.env',process.env);
+
+console.log('process.env.GITHUB_TOKEN',process.env.GITHUB_TOKEN);
+
+const GitHub = require('github');
 const exec = require('child_process').execSync;
 const fs = require('fs');
 const path = require('path');
@@ -7,9 +12,6 @@ const github = new GitHub({
   debug: process.env.NODE_ENV === 'development',
 });
 
-console.log('process.env',process.env);
-
-console.log('process.env.GITHUB_TOKEN',process.env.GITHUB_TOKEN);
 
 github.authenticate({
   type: 'token',
