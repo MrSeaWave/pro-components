@@ -37,5 +37,5 @@ jobs:
 
       - name: deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         run: npm run createRelease
